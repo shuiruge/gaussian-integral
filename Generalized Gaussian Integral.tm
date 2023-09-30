@@ -7,7 +7,7 @@
 
   <section|Basic Idea>
 
-  <subsection|Representation Theory May Generalize Gaussian Integral>
+  <subsection|Dirac's Representation Theory May Generalize Gaussian Integral>
 
   Originally, the multi-dimensional Gaussian integral is, for any positive
   definite real symmetric matrix <math|A> and vector <math|b>,
@@ -64,10 +64,10 @@
   \;
 
   <\equation>
-    ln<around*|[|<big|int>\<mathd\>\<mu\><around*|(|\|\<varphi\>
-    \<rangle\>|)> exp<around*|(|-\<langle\> \<varphi\>\|A\|\<varphi\>
-    \<rangle\>+\<langle\> b\|\<varphi\> \<rangle\>|)>|]>=<frac|1|2>\<langle\>
-    b\|A<rsup|-1>\|b \<rangle\>-<frac|1|2>tr ln<around*|(|A|)>+Const.
+    ln<around*|[|<big|int>\<mathd\>\|\<varphi\> \<rangle\>
+    exp<around*|(|-\<langle\> \<varphi\>\|A\|\<varphi\> \<rangle\>+\<langle\>
+    b\|\<varphi\> \<rangle\>|)>|]>=<frac|1|2>\<langle\> b\|A<rsup|-1>\|b
+    \<rangle\>-<frac|1|2>tr ln<around*|(|A|)>+Const.
   </equation>
 
   With this expression, by inserting <math|<big|sum><rsub|\<alpha\>>\|\<alpha\>
@@ -79,8 +79,8 @@
   The problems left are:
 
   <\itemize>
-    <item>How is the measurement <math|\<mathd\>\<mu\><around*|(|\|\<varphi\>
-    \<rangle\>|)>> defined?
+    <item>How is the measurement <math|\<mathd\>\|\<varphi\> \<rangle\>>
+    defined?
 
     <item>Is <math|tr ln<around*|(|A|)>> independent of representation?
   </itemize>
@@ -343,18 +343,6 @@
     b|)>.
   </equation>
 
-  Go back to the first problem: what is the measurement
-  <math|\<mu\><around*|(|\|\<varphi\> \<rangle\>|)>>? Now, we can say, given
-  a complete orthogonal basis <math|\|x \<rangle\>>,
-  <math|\<mu\><around*|(|\|\<varphi\> \<rangle\>|)>=<big|prod><rsub|x>\<mathd\><around*|[|\<varphi\><around*|(|x|)>|]>\<mathd\><around*|[|<wide|\<varphi\><around*|(|x|)>|\<bar\>>|]>>
-  which is invariant when changing from <math|\|x \<rangle\>> to another
-  complete orthogonal basis. Indeed, when <math|\|x
-  \<rangle\>\<rightarrow\>\|k \<rangle\>> where <math|\|k \<rangle\>> is
-  another complete orthogonal basis, we have
-  <math|<big|prod><rsub|x>\<mathd\><around*|[|\<varphi\><around*|(|x|)>|]>\<mathd\><around*|[|<wide|\<varphi\><around*|(|x|)>|\<bar\>>|]>=det<around*|(|U|)>
-  det<around*|(|<wide|U|\<bar\>>|)> <big|prod><rsub|k>\<mathd\><around*|[|\<varphi\><around*|(|k|)>|]>\<mathd\><around*|[|<wide|\<varphi\><around*|(|k|)>|\<bar\>>|]>=<big|prod><rsub|k>\<mathd\><around*|[|\<varphi\><around*|(|k|)>|]>\<mathd\><around*|[|<wide|\<varphi\><around*|(|k|)>|\<bar\>>|]>>,
-  where <math|U<rsub|x,k>\<assign\>\<langle\>x \|k \<rangle\>> is unitary.
-
   <subsection|Reducing to Real Gaussian Integral (TODO)><label|section:
   Reducing to Real Gaussian Integral>
 
@@ -412,6 +400,32 @@
   </equation*>
 
   which is exactly the formula of real multi-dimensional Gaussian integral.
+
+  <subsection|Measurement is Representation Independent>
+
+  Go back to the first problem: what is the measurement
+  <math|\<mathd\>\|\<varphi\> \<rangle\>>? Now, we can answer this problem:
+  we should use <math|\<mathd\>\|\<varphi\>
+  \<rangle\>\<mathd\>\<langle\>\<varphi\> \|> instead of
+  <math|\<mathd\>\|\<varphi\> \<rangle\>>. Explicitly, given a complete
+  orthogonal basis <math|\|x \<rangle\>>, <math|\<mathd\>\|\<varphi\>
+  \<rangle\>\<mathd\>\<langle\>\<varphi\>
+  \|\<assign\><big|prod><rsub|x>\<mathd\><around*|[|\<langle\>x \|\<varphi\>
+  \<rangle\>|]>\<mathd\><around*|[|\<langle\>\<varphi\> \|x \<rangle\>|]>>.
+  Remark that <math|\<mathd\>\|\<varphi\>
+  \<rangle\>\<mathd\>\<langle\>\<varphi\> \|> is invariant when changing from
+  <math|\|x \<rangle\>> to another complete orthogonal basis. Indeed, when
+  <math|\|x \<rangle\>\<rightarrow\>\|k \<rangle\>> where <math|\|k
+  \<rangle\>> is another complete orthogonal basis, we have
+  <math|<big|prod><rsub|x>\<mathd\><around*|[|\<langle\>x \|\<varphi\>
+  \<rangle\>|]>\<mathd\><around*|[|\<langle\>\<varphi\> \|x
+  \<rangle\>|]>=det<around*|(|U|)> det<around*|(|<wide|U|\<bar\>>|)>
+  <big|prod><rsub|k>\<mathd\><around*|[|\<langle\>k \|\<varphi\>
+  \<rangle\>|]>\<mathd\><around*|[|\<langle\>\<varphi\> \|k
+  \<rangle\>|]>=<big|prod><rsub|k>\<mathd\><around*|[|\<langle\>k
+  \|\<varphi\> \<rangle\>|]>\<mathd\><around*|[|\<langle\>\<varphi\> \|k
+  \<rangle\>|]>>, where <math|U<rsub|x,k>\<assign\>\<langle\>x \|k
+  \<rangle\>> is unitary.
 
   <section|Trace (TODO)>
 
@@ -533,6 +547,27 @@
   Now, we can answer the second problem: <math|tr ln<around*|(|A|)>> is
   independent of representation.
 
+  <section|Gaussian Integral in Dirac's Representation Theory>
+
+  Putting all discussions in this chapter together, we arrive at a Gaussian
+  integral in Dirac's representation theory, as
+
+  <\equation>
+    <big|int>\<mathd\>\|\<varphi\> \<rangle\>\<mathd\>\<langle\>\<varphi\> \|
+    exp<around*|(|-\<langle\>\<varphi\> \|A\|\<varphi\>
+    \<rangle\>+\<langle\>b \|\<varphi\> \<rangle\>+\<langle\>\<varphi\> \|b
+    \<rangle\>|)>=exp<around*|(|\<langle\>b \|A<rsup|-1>\|b \<rangle\>-tr
+    ln<around*|(|A|)>+Const|)>,
+  </equation>
+
+  where for any representation <math|\|x \<rangle\>>,
+  <math|\<mathd\>\|\<varphi\> \<rangle\>\<mathd\>\<langle\>\<varphi\>
+  \|=<big|prod><rsub|x>\<mathd\><around*|[|\<langle\>x \|\<varphi\>
+  \<rangle\>|]>\<mathd\><around*|[|\<langle\>\<varphi\> \|x \<rangle\>|]>>.
+  Remark that both <math|\<mathd\>\|\<varphi\> \<rangle\>\<langle\>\<varphi\>
+  \|> and <math|tr ln<around*|(|A|)>> are independent of representation,
+  which means keeping invariant when representation is changed.
+
   <appendix|Berezin Integral (TODO)>
 
   C.f. <hlink|wikipedia|https://en.wikipedia.org/wiki/Berezin_integral#Useful_formulas>.
@@ -557,16 +592,18 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|3.2|6>>
-    <associate|auto-11|<tuple|A|6>>
+    <associate|auto-10|<tuple|3.1|6>>
+    <associate|auto-11|<tuple|3.2|6>>
+    <associate|auto-12|<tuple|4|?>>
+    <associate|auto-13|<tuple|A|?>>
     <associate|auto-2|<tuple|1|1>>
     <associate|auto-3|<tuple|1.1|1>>
     <associate|auto-4|<tuple|2|2>>
     <associate|auto-5|<tuple|2.1|2>>
     <associate|auto-6|<tuple|2.2|3>>
     <associate|auto-7|<tuple|2.3|5>>
-    <associate|auto-8|<tuple|3|5>>
-    <associate|auto-9|<tuple|3.1|5>>
+    <associate|auto-8|<tuple|2.4|5>>
+    <associate|auto-9|<tuple|3|5>>
     <associate|footnote-1|<tuple|1|3>>
     <associate|footnr-1|<tuple|1|3>>
     <associate|section: Reducing to Real Gaussian Integral|<tuple|2.3|5>>
