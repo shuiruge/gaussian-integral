@@ -21,7 +21,7 @@
 
   where <math|\<varphi\><rsup|t>> denotes the transpose of vector
   <math|\<varphi\>>. With <math|det<around*|(|A|)>=exp<around*|(|tr
-  ln<around*|(|A|)>|)>>, we can obsorb the
+  ln<around*|(|A|)>|)>>, we can absorb the
   <math|<around*|(|det<around*|(|A|)>|)><rsup|-1/2>> factor into the
   exponential, as
 
@@ -95,8 +95,8 @@
   <subsection|One-Dimensional Complex Gaussian Integral>
 
   In complex plane, we have to ensure that, the measurement is real, so is
-  the integrand. So, the only way of writting a complex Gaussian-like
-  integral is
+  the integrand. So, the only way of writing a complex Gaussian-like integral
+  is
 
   <\equation*>
     <big|int><rsub|\<bbb-C\>>\<mathd\>z\<mathd\><wide|z|\<bar\>>
@@ -236,7 +236,7 @@
   First, we have to declare how <math|\<mathd\>z\<mathd\><wide|z|\<bar\>>>
   changes with coordinates. Recall the case in real space, we have
   <math|\<mathd\>x=det<around*|(|\<partial\>x/\<partial\>y|)> \<mathd\>y>.
-  The derivation of this formula is purely algebric, thus can be directly
+  The derivation of this formula is purely algebraic, thus can be directly
   generalized to complex space. So, from <math|z=U w>, we get
   <math|\<mathd\>z=det<around*|(|U|)> \<mathd\>w>; and from
   <math|<wide|z|\<bar\>>=<wide|w|\<bar\>> <wide|U|\<bar\>>>, we get
@@ -462,7 +462,7 @@
   <math|tr<around*|(|A|)>> is defined as <math|<big|int>\<mathd\>x
   \<langle\>x \|A\|x \<rangle\>>.
 
-  <subsection|Trace of Logorithm is Representation Independent>
+  <subsection|Trace of Logarithm is Representation Independent>
 
   Now, we have solved the first problem and come to the second. That is, how
   <math|tr ln <around*|(|A|)>> changes with representation.
@@ -477,7 +477,7 @@
 
   where <math|U> is a unitary operator and <math|X> is an arbitrary operator.
   It can be proven by simply noticing <math|U <wide|U|\<bar\>>=1>. Taking
-  logorithm on both sides, we find
+  logarithm on both sides, we find
 
   <\equation*>
     U X <wide|U|\<bar\>>=ln<around*|(|U \<mathe\><rsup|X>
@@ -550,7 +550,9 @@
   <section|Gaussian Integral in Dirac's Representation Theory>
 
   Putting all discussions in this chapter together, we arrive at a Gaussian
-  integral in Dirac's representation theory, as
+  integral in Dirac's representation theory. That is, for any positive
+  definite Hermitian operator <math|A> and any ket <math|\|b \<rangle\>>, we
+  have
 
   <\equation>
     <big|int>\<mathd\>\|\<varphi\> \<rangle\>\<mathd\>\<langle\>\<varphi\> \|
@@ -646,8 +648,8 @@
       Representation Independent <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-8>>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Trace
-      (TODO)> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Trace>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-9><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|3.1<space|2spc>Trace in Continuous
