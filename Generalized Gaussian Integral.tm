@@ -70,7 +70,7 @@
     x<rsup|2>-A y<rsup|2>+2p x+2q y.>>>>
   </align>
 
-  So, we get
+  Altogether, we get
 
   <\equation*>
     <big|int><rsub|\<bbb-C\>>\<mathd\>z\<mathd\><wide|z|\<bar\>>
@@ -146,12 +146,12 @@
   Transformation><label|section: Differential Form Is Invariant for Unitary
   Transformation>
 
-  To generalize the previous result multi-dimension, we have to declare the
-  complex differential form used for writing down the multi-dimensional
+  To generalize the previous result to multi-dimension, we have to declare
+  the complex differential form used for writing down the multi-dimensional
   complex Gaussian integral. A general complex integral has the form
 
   <\equation*>
-    <big|int><rsub|\<bbb-C\><rsup|2n>>\<mathd\>z\<mathd\><wide|z|\<bar\>>
+    <big|int><rsub|\<bbb-C\><rsup|n>>\<mathd\>z\<mathd\><wide|z|\<bar\>>
     <around*|{|<text|integrand>|}>,
   </equation*>
 
@@ -173,8 +173,9 @@
     notations shall be consistent throughout the note, we employ bar-notation
     for representing transjugate.
   </footnote>. Recall the case in real space, we have
-  <math|\<mathd\>x=det<around*|(|\<partial\>x/\<partial\>y|)> \<mathd\>y>.
-  The derivation of this formula is purely algebraic, thus can be directly
+  <math|\<mathd\>x=det<around*|(|\<partial\>x/\<partial\>y|)> \<mathd\>y>,
+  where <math|\<mathd\>x> and <math|\<mathd\>y> are <math|n>-form. The
+  derivation of this formula is purely algebraic, thus can be directly
   generalized to complex space. So, from <math|z=U w>, we get
   <math|\<mathd\>z=det<around*|(|U|)> \<mathd\>w>; and from
   <math|<wide|z|\<bar\>>=<wide|w|\<bar\>> <wide|U|\<bar\>>>, we get
@@ -183,9 +184,9 @@
 
   <\align>
     <tformat|<table|<row|<cell|>|<cell|\<mathd\>z\<mathd\><wide|z|\<bar\>>>>|<row|<cell|<around*|{|\<mathd\>z,\<mathd\><wide|z|\<bar\>>=\<cdots\>|}>=>|<cell|det<around*|(|U|)>
-    det<around*|(|<wide|U|\<bar\>>|)> \<mathd\>w\<mathd\><wide|w|\<bar\>>>>|<row|<cell|<around*|{|det<around*|(|A|)>
-    det<around*|(|B|)>=det<around*|(|A B|)>|}>=>|<cell|det<around*|(|U
-    <wide|U|\<bar\>>|)> \<mathd\>w\<mathd\><wide|w|\<bar\>>>>|<row|<cell|<around*|{|U
+    det<around*|(|<wide|U|\<bar\>>|)> \<mathd\>w\<mathd\><wide|w|\<bar\>>>>|<row|<cell|<around*|{|<text|property
+    of <math|det>>|}>=>|<cell|det<around*|(|U <wide|U|\<bar\>>|)>
+    \<mathd\>w\<mathd\><wide|w|\<bar\>>>>|<row|<cell|<around*|{|U
     <wide|U|\<bar\>>=1|}>=>|<cell|\<mathd\>w\<mathd\><wide|w|\<bar\>>.>>>>
   </align>
 
@@ -199,7 +200,7 @@
   one-dimensional to multi-dimensional, that is
 
   <\equation*>
-    <big|int><rsub|\<bbb-C\><rsup|2n>>\<mathd\>z\<mathd\><wide|z|\<bar\>>
+    <big|int><rsub|\<bbb-C\><rsup|n>>\<mathd\>z\<mathd\><wide|z|\<bar\>>
     exp<around*|(|-<wide|z|\<bar\>> A \ z+<wide|b|\<bar\>> z+<wide|z|\<bar\>>
     b|)>,
   </equation*>
@@ -226,9 +227,9 @@
   b=<wide|\<zeta\>|\<bar\>> h>. Altogether, we find
 
   <\equation*>
-    <big|int><rsub|\<bbb-C\><rsup|2n>>\<mathd\>z\<mathd\><wide|z|\<bar\>>
+    <big|int><rsub|\<bbb-C\><rsup|n>>\<mathd\>z\<mathd\><wide|z|\<bar\>>
     exp<around*|(|-<wide|z|\<bar\>> A \ z+<wide|b|\<bar\>> z+<wide|z|\<bar\>>
-    b|)>=<big|int><rsub|\<bbb-C\><rsup|2n>>\<mathd\>\<zeta\>\<mathd\><wide|\<zeta\>|\<bar\>>
+    b|)>=<big|int><rsub|\<bbb-C\><rsup|n>>\<mathd\>\<zeta\>\<mathd\><wide|\<zeta\>|\<bar\>>
     exp<around*|(|-<wide|\<zeta\>|\<bar\>> D \ \<zeta\>+<wide|h|\<bar\>>
     \<zeta\>+<wide|\<zeta\>|\<bar\>> h|)>.
   </equation*>
@@ -237,13 +238,14 @@
   individually, as
 
   <\align>
-    <tformat|<table|<row|<cell|>|<cell|<big|int><rsub|\<bbb-C\><rsup|2n>>\<mathd\>\<zeta\>\<mathd\><wide|\<zeta\>|\<bar\>>
-    <big|prod><rsub|\<alpha\>=1><rsup|n>exp<around*|(|-<wide|\<zeta\>|\<bar\>>
-    D \<zeta\>+<wide|h|\<bar\>> \<zeta\>+<wide|\<zeta\>|\<bar\>>
-    h|)>>>|<row|<cell|<around*|{|<text|move
-    <math|\<mathd\>\<zeta\><rsup|\<alpha\>>> to
-    <math|\<mathd\><wide|\<zeta\>|\<bar\>><rsup|\<alpha\>>>>|}>=>|<cell|<around*|(|-1|)><rsup|n
-    <around*|(|n-1|)>/2> <big|prod><rsub|\<alpha\>=1><rsup|n><around*|[|<big|int><rsub|\<bbb-C\><rsup|2>>\<mathd\>\<zeta\><rsup|\<alpha\>>\<mathd\><wide|\<zeta\>|\<bar\>><rsup|\<alpha\>>exp<around*|(|-<wide|\<zeta\>|\<bar\>><rsup|\<alpha\>>
+    <tformat|<table|<row|<cell|>|<cell|<big|int><rsub|\<bbb-C\><rsup|n>>\<mathd\>\<zeta\>\<mathd\><wide|\<zeta\>|\<bar\>>
+    <big|prod><rsub|\<alpha\>=1><rsup|n>exp<around*|(|-<wide|\<zeta\>|\<bar\>><rsup|\<alpha\>>
+    D<rsub|\<alpha\>\<alpha\>> \<zeta\><rsup|\<alpha\>>+<wide|h|\<bar\>><rsub|\<alpha\>>
+    \<zeta\><rsup|\<alpha\>>+<wide|\<zeta\>|\<bar\>><rsub|\<alpha\>>
+    h<rsup|\<alpha\>>|)>>>|<row|<cell|<around*|{|<text|move
+    <math|\<mathd\><wide|\<zeta\>|\<bar\>><rsup|\<alpha\>>> to
+    <math|\<mathd\>\<zeta\><rsup|\<alpha\>>>>|}>=>|<cell|<around*|(|-1|)><rsup|n
+    <around*|(|n-1|)>/2> <big|prod><rsub|\<alpha\>=1><rsup|n><around*|[|<big|int><rsub|\<bbb-C\><rsup|n>>\<mathd\>\<zeta\><rsup|\<alpha\>>\<mathd\><wide|\<zeta\>|\<bar\>><rsup|\<alpha\>>exp<around*|(|-<wide|\<zeta\>|\<bar\>><rsup|\<alpha\>>
     D<rsub|\<alpha\>\<alpha\>>\<zeta\><rsup|\<alpha\>>+<wide|h|\<bar\>><rsup|\<alpha\>>
     \<zeta\><rsup|\<alpha\>>+<wide|\<zeta\>|\<bar\>><rsup|\<alpha\>>
     h<rsub|\<alpha\>>|)>|]>>>|<row|<cell|<around*|{|<text|1-dimensional
@@ -258,45 +260,42 @@
   </align>
 
   The final step is changing coordinates back to <math|z> from
-  <math|\<zeta\>>. Since <math|D=<wide|U|\<bar\>> A U> and
-  <math|h=<wide|U|\<bar\>> b>, we have
+  <math|\<zeta\>>. Since <math|D=<wide|U|\<bar\>> A U>, we have
 
   <\align>
     <tformat|<table|<row|<cell|>|<cell|<big|prod><rsub|\<alpha\>=1><rsup|n>D<rsub|\<alpha\>\<alpha\>>>>|<row|<cell|=>|<cell|det<around*|(|D|)>>>|<row|<cell|=>|<cell|det<around*|(|<wide|U|\<bar\>>
     A U|)>>>|<row|<cell|=>|<cell|det<around*|(|<wide|U|\<bar\>>|)>
     det<around*|(|A|)> det<around*|(|U|)>>>|<row|<cell|=>|<cell|det<around*|(|U
     <wide|U|\<bar\>>|)> det<around*|(|A|)>>>|<row|<cell|<around*|{|U
-    <wide|U|\<bar\>>=1|}>=>|<cell|det<around*|(|A|)>.>>>>
+    <wide|U|\<bar\>>=1|}>=>|<cell|det<around*|(|A|)>,>>>>
   </align>
 
-  And since <math|U> and <math|<wide|U|\<bar\>>> are mutually inverse, we
-  have
+  and
 
   <\align>
-    <tformat|<table|<row|<cell|>|<cell|<around*|(|<wide|U|\<bar\>> A
-    U|)><rsup|-1>>>|<row|<cell|<around*|{|property of
+    <tformat|<table|<row|<cell|>|<cell|D<rsup|-1>>>|<row|<cell|=>|<cell|<around*|(|<wide|U|\<bar\>>
+    A U|)><rsup|-1>>>|<row|<cell|<around*|{|property of
     inverse|}>=>|<cell|U<rsup|-1> A<rsup|-1>
     <around*|(|<wide|U|\<bar\>>|)><rsup|-1>>>|<row|<cell|<around*|{|U
     <wide|U|\<bar\>>=1|}>=>|<cell|<wide|U|\<bar\>> A<rsup|-1> U,>>>>
   </align>
 
-  thus
+  Finally, since <math|h=<wide|U|\<bar\>> b>, we have
 
   <\align>
     <tformat|<table|<row|<cell|>|<cell|<big|sum><rsub|\<alpha\>=1><rsup|n><frac|h<rsub|\<alpha\>>
     <wide|h|\<bar\>><rsub|\<alpha\>>|D<rsub|\<alpha\>\<alpha\>>>>>|<row|<cell|=>|<cell|<wide|h|\<bar\>>
     D<rsup|-1> h>>|<row|<cell|<around*|{|previous
-    conclusion|}>=>|<cell|<wide|b|\<bar\>> U <around*|(|<wide|U|\<bar\>> A
-    U|)><rsup|-1> <wide|U|\<bar\>> b>>|<row|<cell|<around*|{|U
-    <wide|U|\<bar\>>=1|}>=>|<cell|<wide|b|\<bar\>> U
-    <wide|U|\<bar\>>A<rsup|-1> U <wide|U|\<bar\>>
-    b>>|<row|<cell|=>|<cell|<wide|b|\<bar\>> A<rsup|-1> b.>>>>
+    conclusion|}>=>|<cell|<wide|b|\<bar\>> U
+    <around*|(|<wide|U|\<bar\>>A<rsup|-1> U|)> <wide|U|\<bar\>>
+    b>>|<row|<cell|<around*|{|U <wide|U|\<bar\>>=1|}>=>|<cell|<wide|b|\<bar\>>
+    A<rsup|-1> b.>>>>
   </align>
 
   Altogether, we find
 
   <\equation*>
-    <big|int><rsub|\<bbb-C\><rsup|2n>>\<mathd\>z\<mathd\><wide|z|\<bar\>>
+    <big|int><rsub|\<bbb-C\><rsup|n>>\<mathd\>z\<mathd\><wide|z|\<bar\>>
     exp<around*|(|-<wide|z|\<bar\>> A \ z+<wide|b|\<bar\>> z+<wide|z|\<bar\>>
     b|)>=<frac|\<mathi\><rsup|n <around*|(|n+2|)>><around*|(|2\<mathpi\>|)><rsup|n>|det<around*|(|A|)>>
     exp<around*|(|<wide|b|\<bar\>> A<rsup|-1> b|)>.
@@ -307,7 +306,7 @@
   exponential. Finally, we arrive at
 
   <\equation>
-    ln<around*|[|<big|int><rsub|\<bbb-C\><rsup|2n>>\<mathd\>z\<mathd\><wide|z|\<bar\>>
+    ln<around*|[|<big|int><rsub|\<bbb-C\><rsup|n>>\<mathd\>z\<mathd\><wide|z|\<bar\>>
     exp<around*|(|-<wide|z|\<bar\>> A \ z+<wide|b|\<bar\>> z+<wide|z|\<bar\>>
     b|)>|]>=<wide|b|\<bar\>> A<rsup|-1> b-tr ln<around*|(|A|)>+Const,
   </equation>
@@ -332,7 +331,7 @@
   to <math|\<mathd\>x\<mathd\>y>. As it has been derived,
 
   <\align>
-    <tformat|<table|<row|<cell|>|<cell|<big|int><rsub|\<bbb-C\><rsup|2n>>\<mathd\>z\<mathd\><wide|z|\<bar\>>
+    <tformat|<table|<row|<cell|>|<cell|<big|int><rsub|\<bbb-C\><rsup|n>>\<mathd\>z\<mathd\><wide|z|\<bar\>>
     exp<around*|(|-<wide|z|\<bar\>> A \ z+<wide|b|\<bar\>> z+<wide|z|\<bar\>>
     b|)>>>|<row|<cell|<around*|{|z=x+\<mathi\>
     y|}>=>|<cell|<around*|(|-1|)><rsup|n<around*|(|n-1|)>/2> <around*|(|-2
@@ -421,8 +420,8 @@
     U|)>.
   </equation>
 
-  Taking tace on both side, we get <math|tr<around*|(|<wide|U|\<bar\>>
-  ln<around*|(|A|)> U|)>=tr ln<around*|(|A|)>>.<\footnote>
+  Taking tace on both side, and noticing <math|tr<around*|(|<wide|U|\<bar\>>
+  ln<around*|(|A|)> U|)>=tr ln<around*|(|A|)>> <\footnote>
     This is apparent when we write it in component. That is,
 
     <\align>
@@ -438,7 +437,7 @@
     </align>
 
     which is the <math|tr ln<around*|(|A|)>> written in component.
-  </footnote> Thus,
+  </footnote>, we finally arrive at\ 
 
   <\equation*>
     tr ln<around*|(|A|)>=tr ln<around*|(|<wide|U|\<bar\>> A U|)>.
@@ -454,7 +453,7 @@
   unitary transformation. We restate the result as
 
   <\equation*>
-    ln<around*|[|<big|int><rsub|\<bbb-C\><rsup|2n>>\<mathd\>z\<mathd\><wide|z|\<bar\>>
+    ln<around*|[|<big|int><rsub|\<bbb-C\><rsup|n>>\<mathd\>z\<mathd\><wide|z|\<bar\>>
     exp<around*|(|-<wide|z|\<bar\>> A \ z+<wide|b|\<bar\>> z+<wide|z|\<bar\>>
     b|)>|]>=<wide|b|\<bar\>> A<rsup|-1> b-tr ln<around*|(|A|)>+Const.
   </equation*>
@@ -462,7 +461,7 @@
   Taking unitary transformation <math|w\<assign\><wide|U|\<bar\>> z>, the
   matrix or operator <math|A> transforms as <math|B\<assign\><wide|U|\<bar\>>
   A U>, and the <math|b> as <math|c\<assign\><wide|U|\<bar\>> b>. Because of
-  <math|U <wide|U|\<bar\>>=1>, we have <math|A<rsup|-1>=U B
+  <math|U <wide|U|\<bar\>>=1>, we have <math|A<rsup|-1>=U B<rsup|-1>
   <wide|U|\<bar\>>>. As discussed in section <reference|section: Differential
   Form Is Invariant for Unitary Transformation> and section
   <reference|section: Trace of Logarithm Is Invariant for Unitary
@@ -471,7 +470,7 @@
   integral is transformed to
 
   <\equation*>
-    ln<around*|[|<big|int><rsub|\<bbb-C\><rsup|2n>>\<mathd\>w\<mathd\><wide|w|\<bar\>>
+    ln<around*|[|<big|int><rsub|\<bbb-C\><rsup|n>>\<mathd\>w\<mathd\><wide|w|\<bar\>>
     exp<around*|(|-<wide|w|\<bar\>> B \ w+<wide|c|\<bar\>> w+<wide|w|\<bar\>>
     c|)>|]>=<wide|c|\<bar\>> B<rsup|-1> c-tr ln<around*|(|B|)>+Const.
   </equation*>
@@ -514,7 +513,7 @@
   ket <math|\|b \<rangle\>> which may not be normalized, we have
 
   <\equation>
-    <big|int>\<mathd\>\|\<varphi\> \<rangle\>\<mathd\>\<langle\>\<varphi\> \|
+    <big|int>\<mathd\>\|\<varphi\>\<rangle\>\<mathd\>\<langle\>\<varphi\>\|
     exp<around*|(|-\<langle\>\<varphi\> \|A\|\<varphi\>
     \<rangle\>+\<langle\>b \|\<varphi\> \<rangle\>+\<langle\>\<varphi\> \|b
     \<rangle\>|)>=exp<around*|(|\<langle\>b \|A<rsup|-1>\|b \<rangle\>-tr
@@ -522,19 +521,19 @@
   </equation>
 
   where for any complete orthogonal basis <math|<around*|{|\|x
-  \<rangle\>\|x\<in\>X|}>>, <math|\<mathd\>\|\<varphi\>
-  \<rangle\>\<mathd\>\<langle\>\<varphi\>
-  \|=<big|prod><rsub|x\<in\>X>\<mathd\><around*|[|\<langle\>x \|\<varphi\>
-  \<rangle\>|]>\<mathd\><around*|[|\<langle\>\<varphi\> \|x \<rangle\>|]>>.
+  \<rangle\>\|x\<in\>X|}>>, <math|\<mathd\>\|\<varphi\>\<rangle\>\<mathd\>\<langle\>\<varphi\>\|=<big|prod><rsub|x\<in\>X>\<mathd\><around*|[|\<langle\>x
+  \|\<varphi\> \<rangle\>|]>\<mathd\><around*|[|\<langle\>\<varphi\> \|x
+  \<rangle\>|]>>. Herein, the product is wedged, thus the
+  <math|\<mathd\>\|\<varphi\> \<rangle\>\<mathd\>\<langle\>\<varphi\> \|> can
+  be seen as an \Pabstract differential form\Q.
 
   This expression is abstract. We can get an explicit expression by simply
   inserting a complete relation, like <math|<big|sum><rsub|\<alpha\>>\|
   \<alpha\>\<rangle\>\<langle\>\<alpha\> \|=1> or
   <math|<big|int><rsub|X>\<mathd\>x\|x \<rangle\>\<langle\>x \|=1>
   <\footnote>
-    The expression of <math|tr ln<around*|(|A|)>> for continuous
-    representation is discussed in appendix <reference|appendix: Trace in
-    Continuous Representation>.
+    The definition of trace for continuous representation is discussed in
+    appendix <reference|appendix: Trace in Continuous Representation>.
   </footnote>. This this reason, it is called the
   <with|font-series|bold|generalized Gaussian integral>.
 
@@ -583,31 +582,38 @@
 
   C.f. <hlink|wikipedia|https://en.wikipedia.org/wiki/Berezin_integral#Useful_formulas>.
 
-  We have,
+  From the multi-dimensional complex Gaussian integral
+
+  <\equation*>
+    <big|int><rsub|\<bbb-C\><rsup|n>>\<mathd\>z\<mathd\><wide|z|\<bar\>>
+    exp<around*|(|-<wide|z|\<bar\>> A \ z+<wide|b|\<bar\>> z+<wide|z|\<bar\>>
+    b|)>=<frac|\<mathi\><rsup|n <around*|(|n+2|)>><around*|(|2\<mathpi\>|)><rsup|n>|det<around*|(|A|)>>
+    exp<around*|(|<wide|b|\<bar\>> A<rsup|-1> b|)>,
+  </equation*>
+
+  we get,
 
   <\equation>
     \<mathi\><rsup|n <around*|(|n+2|)>><around*|(|2\<mathpi\>|)><rsup|n>
     exp<around*|(|<wide|b|\<bar\>> A<rsup|-1> b|)>=<big|int>\<mathd\>z
-    \<mathd\><wide|z|\<bar\>> \<mathd\><wide|\<psi\>|\<bar\>>\<mathd\>\<psi\>
+    \<mathd\><wide|z|\<bar\>> \<mathd\>\<psi\>\<mathd\><wide|\<psi\>|\<bar\>>
     exp<around*|(|-<wide|z|\<bar\>> A \ z+<wide|b|\<bar\>> z+<wide|z|\<bar\>>
     b-<wide|\<psi\>|\<bar\>> A \<psi\>|)>,
   </equation>
 
   where <math|\<psi\>> is a Grassmann number. The right hand side is
-  invariant under infinitisimal transformation
+  invariant under infinitesimal transformation
 
   <\align>
     <tformat|<table|<row|<cell|\<delta\>z>|<cell|=<wide|\<epsilon\>|\<bar\>>
     \<psi\>>>|<row|<cell|\<delta\>\<psi\>>|<cell|=-\<epsilon\>z,>>>>
   </align>
 
-  for any infinitisimal Grassmann number <math|\<epsilon\>>, in the sense
+  for any infinitesimal Grassmann number <math|\<epsilon\>>, in the sense
   that the leading order of variance is of
   <math|<with|font|cal|O><around*|(|<around*|\||\<epsilon\>|\|><rsup|2>|)>>.
   It is interesting that this transformation exchanges complex and Grassmann
   numbers.
-
-  \;
 </body>
 
 <\initial>
