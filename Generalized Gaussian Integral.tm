@@ -588,10 +588,26 @@
   <\equation>
     \<mathi\><rsup|n <around*|(|n+2|)>><around*|(|2\<mathpi\>|)><rsup|n>
     exp<around*|(|<wide|b|\<bar\>> A<rsup|-1> b|)>=<big|int>\<mathd\>z
-    \<mathd\><wide|z|\<bar\>> \<mathd\>\<theta\>\<mathd\>\<eta\>
+    \<mathd\><wide|z|\<bar\>> \<mathd\><wide|\<psi\>|\<bar\>>\<mathd\>\<psi\>
     exp<around*|(|-<wide|z|\<bar\>> A \ z+<wide|b|\<bar\>> z+<wide|z|\<bar\>>
-    b-\<theta\><rsup|t> A \<eta\>|)>
+    b-<wide|\<psi\>|\<bar\>> A \<psi\>|)>,
   </equation>
+
+  where <math|\<psi\>> is a Grassmann number. The right hand side is
+  invariant under infinitisimal transformation
+
+  <\align>
+    <tformat|<table|<row|<cell|\<delta\>z>|<cell|=<wide|\<epsilon\>|\<bar\>>
+    \<psi\>>>|<row|<cell|\<delta\>\<psi\>>|<cell|=-\<epsilon\>z,>>>>
+  </align>
+
+  for any infinitisimal Grassmann number <math|\<epsilon\>>, in the sense
+  that the leading order of variance is of
+  <math|<with|font|cal|O><around*|(|<around*|\||\<epsilon\>|\|><rsup|2>|)>>.
+  It is interesting that this transformation exchanges complex and Grassmann
+  numbers.
+
+  \;
 </body>
 
 <\initial>
@@ -602,110 +618,99 @@
 
 <\references>
   <\collection>
-    <associate|appendix: Trace in Continuous Representation|<tuple|A.1|?>>
+    <associate|appendix: Trace in Continuous Representation|<tuple|A.1|6>>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|A|5>>
-    <associate|auto-11|<tuple|A.1|5>>
-    <associate|auto-12|<tuple|B|6>>
-    <associate|auto-13|<tuple|A|6>>
-    <associate|auto-14|<tuple|A.1|?>>
-    <associate|auto-15|<tuple|B|?>>
+    <associate|auto-10|<tuple|A|6>>
+    <associate|auto-11|<tuple|A.1|6>>
+    <associate|auto-12|<tuple|B|7>>
     <associate|auto-2|<tuple|1.1|1>>
     <associate|auto-3|<tuple|1.2|1>>
     <associate|auto-4|<tuple|1.3|2>>
-    <associate|auto-5|<tuple|1.4|2>>
-    <associate|auto-6|<tuple|1.5|3>>
-    <associate|auto-7|<tuple|1.6|4>>
+    <associate|auto-5|<tuple|1.4|3>>
+    <associate|auto-6|<tuple|1.5|4>>
+    <associate|auto-7|<tuple|1.6|5>>
     <associate|auto-8|<tuple|1.7|5>>
-    <associate|auto-9|<tuple|1.8|5>>
-    <associate|footnote-1|<tuple|1|3>>
-    <associate|footnote-2|<tuple|2|?>>
-    <associate|footnote-3|<tuple|3|?>>
-    <associate|footnote-4|<tuple|4|?>>
-    <associate|footnote-5|<tuple|5|?>>
-    <associate|footnote-6|<tuple|6|?>>
-    <associate|footnr-1|<tuple|1|3>>
-    <associate|footnr-2|<tuple|2|?>>
-    <associate|footnr-3|<tuple|3|?>>
-    <associate|footnr-4|<tuple|4|?>>
-    <associate|footnr-5|<tuple|5|?>>
-    <associate|footnr-6|<tuple|6|?>>
-    <associate|section:|<tuple|2.7|?>>
+    <associate|auto-9|<tuple|1.8|6>>
+    <associate|footnote-1|<tuple|1|2>>
+    <associate|footnote-2|<tuple|2|5>>
+    <associate|footnote-3|<tuple|3|6>>
+    <associate|footnote-4|<tuple|4|6>>
+    <associate|footnr-1|<tuple|1|2>>
+    <associate|footnr-2|<tuple|2|5>>
+    <associate|footnr-3|<tuple|3|6>>
+    <associate|footnr-4|<tuple|4|6>>
     <associate|section: Complex Gaussian Integral Is Invariant for Unitary
-    Transformation|<tuple|1.7|?>>
+    Transformation|<tuple|1.7|5>>
     <associate|section: Differential Form Is Invariant for Unitary
-    Transformation|<tuple|1.3|?>>
+    Transformation|<tuple|1.3|2>>
     <associate|section: From Complex Gaussian Integral to Real Gaussian
-    Integral|<tuple|1.5|?>>
+    Integral|<tuple|1.5|4>>
     <associate|section: Gaussian Integral in Dirac's Representation
-    Theory|<tuple|1.8|?>>
+    Theory|<tuple|1.8|6>>
     <associate|section: Multi-Dimensional Complex Gaussian
-    Integral|<tuple|1.4|?>>
+    Integral|<tuple|1.4|3>>
     <associate|section: One-Dimensional Complex Gaussian
-    Integral|<tuple|1.2|?>>
-    <associate|section: Reducing to Real Gaussian Integral|<tuple|2.5|4>>
+    Integral|<tuple|1.2|1>>
     <associate|section: Trace of Logarithm Is Invariant for Unitary
-    Transformation|<tuple|1.6|?>>
+    Transformation|<tuple|1.6|5>>
   </collection>
 </references>
 
 <\auxiliary>
   <\collection>
     <\associate|toc>
-      <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|1<space|2spc>Generalized
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Generalized
       Gaussian Integral> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-1><vspace|1fn>
+      <no-break><pageref|auto-1><vspace|0.5fn>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Basic
-      Idea> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-2><vspace|0.5fn>
-
-      <with|par-left|<quote|1tab>|1.1<space|2spc>Dirac's Representation
-      Theory May Generalize Gaussian Integral
+      <with|par-left|<quote|1tab>|1.1<space|2spc>Introduction
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-2>>
+
+      <with|par-left|<quote|1tab>|1.2<space|2spc>One-Dimensional Complex
+      Gaussian Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-3>>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Complex
-      Gaussian Integral> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-4><vspace|0.5fn>
+      <with|par-left|<quote|1tab>|1.3<space|2spc>Differential Form Is
+      Invariant for Unitary Transformation
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-4>>
 
-      <with|par-left|<quote|1tab>|2.1<space|2spc>One-Dimensional Complex
+      <with|par-left|<quote|1tab>|1.4<space|2spc>Multi-Dimensional Complex
       Gaussian Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-5>>
 
-      <with|par-left|<quote|1tab>|2.2<space|2spc>Multi-Dimensional Complex
-      Gaussian Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.5<space|2spc>From Complex Gaussian
+      Integral to Real Gaussian Integral <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-6>>
 
-      <with|par-left|<quote|1tab>|2.3<space|2spc>Reducing to Real Gaussian
-      Integral (TODO) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.6<space|2spc>Trace of Logarithm Is
+      Invariant for Unitary Transformation
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-7>>
 
-      <with|par-left|<quote|1tab>|2.4<space|2spc>Measurement is
-      Representation Independent <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.7<space|2spc>Complex Gaussian Integral Is
+      Invariant for Unitary Transformation
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-8>>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Trace>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-9><vspace|0.5fn>
-
-      <with|par-left|<quote|1tab>|3.1<space|2spc>Trace in Continuous
-      Representation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-10>>
-
-      <with|par-left|<quote|1tab>|3.2<space|2spc>Trace of Logarithm is
-      Representation Independent <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-11>>
-
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Gaussian
-      Integral in Dirac's Representation Theory>
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-12><vspace|0.5fn>
+      <with|par-left|<quote|1tab>|1.8<space|2spc>Gaussian Integral in Dirac's
+      Representation Theory <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-9>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Appendix
-      A<space|2spc>Berezin Integral (TODO)>
+      A<space|2spc>Continuous Representation>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-13><vspace|0.5fn>
+      <no-break><pageref|auto-10><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|A.1<space|2spc>Trace in Continuous
+      Representation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-11>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Appendix
+      B<space|2spc>Berezin Integral (TODO)>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-12><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
