@@ -3,96 +3,33 @@
 <style|generic>
 
 <\body>
-  <chapter|Generalized Gaussian Integral>
+  <section|Generalized Gaussian Integral>
 
-  <section|Basic Idea>
+  <subsection|Introduction>
 
-  <subsection|Dirac's Representation Theory May Generalize Gaussian Integral>
+  In this note, we explore the Gaussian integral in complex space.
 
-  Originally, the multi-dimensional Gaussian integral is, for any positive
-  definite real symmetric matrix <math|A> and vector <math|b>,
+  To define and evaluate Gaussian integral in complex space, we first
+  consider the one-dimensional case in section <reference|section:
+  One-Dimensional Complex Gaussian Integral>, And then generalize the result
+  to multi-dimensional case in section <reference|section: Multi-Dimensional
+  Complex Gaussian Integral>. To check the result, we reduce it to real
+  Gaussian integral in section <reference|section: From Complex Gaussian
+  Integral to Real Gaussian Integral>.
 
-  <\equation>
-    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<varphi\>
-    exp<around*|(|-<frac|1|2>\<varphi\><rsup|t> A \<varphi\>+b<rsup|t>
-    \<varphi\>|)>=<sqrt|<frac|<around*|(|2\<mathpi\>|)><rsup|n>|det<around*|(|A|)>>>exp<around*|(|<frac|1|2>b<rsup|t>
-    A<rsup|-1> b|)>,
-  </equation>
+  Importantly, in section <reference|section: Differential Form Is Invariant
+  for Unitary Transformation>, <reference|section: Trace of Logarithm Is
+  Invariant for Unitary Transformation>, and <reference|section: Complex
+  Gaussian Integral Is Invariant for Unitary Transformation>, we find that
+  the result of complex Gaussian integral is invariant for unitary
+  transformation. This enable us to express it in Dirac's representation
+  theory, in section <reference|section: Gaussian Integral in Dirac's
+  Representation Theory>. This expression is abstract. Explicit expression
+  can be obtained by simply inserting a complete relation. It can be seen as
+  a generalization of Gaussian integral.
 
-  where <math|\<varphi\><rsup|t>> denotes the transpose of vector
-  <math|\<varphi\>>. With <math|det<around*|(|A|)>=exp<around*|(|tr
-  ln<around*|(|A|)>|)>>, we can absorb the
-  <math|<around*|(|det<around*|(|A|)>|)><rsup|-1/2>> factor into the
-  exponential, as
-
-  <\equation>
-    ln<around*|[|<big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>\<varphi\>
-    exp<around*|(|-<frac|1|2>\<varphi\><rsup|t> A \<varphi\>+b<rsup|t>
-    \<varphi\>|)>|]>=<frac|1|2>b<rsup|t> A<rsup|-1> b-<frac|1|2>tr
-    ln<around*|(|A|)>+<frac|n|2>ln<around*|(|2\<mathpi\>|)>.
-  </equation>
-
-  There is, however, a functional version, which is very useful in quantum
-  field theory. Let <math|A> a positive definite symmetric kernel and
-  <math|b> a function,
-
-  <\align>
-    <tformat|<table|<row|<cell|>|<cell|ln<around*|[|<around*|(|<big|prod><rsub|x\<in\>V><big|int><rsub|\<bbb-R\>>\<mathd\><around*|[|\<varphi\><around*|(|x|)>|]>|)>exp<around*|(|-<frac|1|2><big|int><rsub|V>\<mathd\>x<big|int><rsub|V>\<mathd\>y
-    \<varphi\><around*|(|x|)>A<around*|(|x,y|)>\<varphi\><around*|(|y|)>+<big|int><rsub|V>\<mathd\>x
-    b<around*|(|x|)>\<varphi\><around*|(|x|)>|)>|]>>>|<row|<cell|=>|<cell|<frac|1|2><big|int><rsub|V>\<mathd\>x<big|int><rsub|V>\<mathd\>y
-    b<around*|(|x|)> <around*|(|A<rsup|-1>|)><around*|(|x,y|)>
-    b<around*|(|y|)>-<frac|1|2><big|int><rsub|V>\<mathd\>x
-    ln<around*|(|A<around*|(|x,x|)>|)>+Const,>>>>
-  </align>
-
-  where <math|A<rsup|-1>> is the functional inverse of <math|A>, defined as
-  <math|<big|int><rsub|V>\<mathd\>y A<around*|(|x,y|)>
-  <around*|(|A<rsup|-1>|)><around*|(|y,z|)>=\<delta\><around*|(|x-z|)>>. It
-  must be noted that, in functional integral, product like
-  <math|<big|prod><rsub|x>\<mathd\><around*|[|\<varphi\><around*|(|x|)>|]>>
-  shall be realized as wedged product. This, however, is not the end. There
-  is also functional version in momentum space, and so on, and so on.
-
-  This motives us to seek for a generalized version of Gaussian integral, so
-  that all these formulae are nothing but viewing the same result from
-  different perspectives.
-
-  An educated guess is using Dirac's representation theory. For instance,
-  letting <math|A> an Hermitian operator and <math|\|b \<rangle\>> a general
-  ket, we may have
-
-  \;
-
-  <\equation>
-    ln<around*|[|<big|int>\<mathd\>\|\<varphi\> \<rangle\>
-    exp<around*|(|-\<langle\> \<varphi\>\|A\|\<varphi\> \<rangle\>+\<langle\>
-    b\|\<varphi\> \<rangle\>|)>|]>=<frac|1|2>\<langle\> b\|A<rsup|-1>\|b
-    \<rangle\>-<frac|1|2>tr ln<around*|(|A|)>+Const.
-  </equation>
-
-  With this expression, by inserting <math|<big|sum><rsub|\<alpha\>>\|\<alpha\>
-  \<rangle\>\<langle\> \<alpha\>\|=1>, we recover the multi-dimensional
-  version; and by inserting <math|<big|int><rsub|V>\<mathd\>x\|
-  x\<rangle\>\<langle\>x \|=1>, we recover the functional version. This
-  provides an abstract expression by using Dirac's bracket notation.
-
-  The problems left are:
-
-  <\itemize>
-    <item>How is the measurement <math|\<mathd\>\|\<varphi\> \<rangle\>>
-    defined?
-
-    <item>Is <math|tr ln<around*|(|A|)>> independent of representation?
-  </itemize>
-
-  Now, we are to deal with the first problem. Recall that bracket notation
-  deals with wave-function of quantum state, which is complex. So, <math|\|
-  \<varphi\>\<rangle\>> is intrinsically complex. This hints us that we shall
-  consider the Gaussian integral on complex plane.
-
-  <section|Complex Gaussian Integral>
-
-  <subsection|One-Dimensional Complex Gaussian Integral>
+  <subsection|One-Dimensional Complex Gaussian Integral><label|section:
+  One-Dimensional Complex Gaussian Integral>
 
   In complex plane, we have to ensure that, the measurement is real, so is
   the integrand. So, the only way of writing a complex Gaussian-like integral
@@ -205,36 +142,37 @@
   make this difference clear in section <reference|section: Reducing to Real
   Gaussian Integral>.
 
-  <subsection|Multi-Dimensional Complex Gaussian Integral>
+  <subsection|Differential Form Is Invariant for Unitary
+  Transformation><label|section: Differential Form Is Invariant for Unitary
+  Transformation>
 
-  We are to generalize the previous result from one-dimensional to
-  multi-dimensional, that is
+  To generalize the previous result multi-dimension, we have to declare the
+  complex differential form used for writing down the multi-dimensional
+  complex Gaussian integral. A general complex integral has the form
 
   <\equation*>
     <big|int><rsub|\<bbb-C\><rsup|2n>>\<mathd\>z\<mathd\><wide|z|\<bar\>>
-    exp<around*|(|-<wide|z|\<bar\>> A \ z+<wide|b|\<bar\>> z+<wide|z|\<bar\>>
-    b|)>,
+    <around*|{|<text|integrand>|}>,
   </equation*>
 
-  where <math|A> is a positive definite Hermitian matrix and <math|b> a
-  complex vector. It must be noted that <math|b> and <math|z> are now
-  vectors, <math|<wide|b|\<bar\>>> or <math|<wide|z|\<bar\>>> means more than
-  <math|b<rsup|\<ast\>>> and <math|z<rsup|\<ast\>>>, but including transpose
-  <\footnote>
-    For a complex vector <math|z>, <math|<wide|z|\<bar\>>\<assign\><around*|(|z<rsup|\<ast\>>|)><rsup|t>>.
-  </footnote>. For this reason, we write <math|<wide|z|\<bar\>> b> instead of
-  <math|b <wide|z|\<bar\>>>. In addition,
-  <math|\<mathd\>z\<mathd\><wide|z|\<bar\>>> means
-  <math|\<mathd\>z<rsup|1>\<wedge\>\<cdots\>\<wedge\>\<mathd\>z<rsup|n>\<wedge\>\<mathd\><wide|z|\<bar\>><rsup|1>\<wedge\>\<cdots\>\<wedge\>\<mathd\><wide|z|\<bar\>><rsup|n>>.
+  where <math|z\<in\>\<bbb-C\><rsup|n>>, and the differential form
+  <math|\<mathd\>z\<mathd\><wide|z|\<bar\>>\<assign\>\<mathd\>z<rsup|1>\<wedge\>\<cdots\>\<wedge\>\<mathd\>z<rsup|n>\<wedge\>\<mathd\><wide|z|\<bar\>><rsup|1>\<wedge\>\<cdots\>\<wedge\>\<mathd\><wide|z|\<bar\>><rsup|n>>.
 
-  Following the same strategy used for real Gaussian integral, we first
-  diagonalize <math|A> as <math|A=U D <wide|U|\<bar\>>> with <math|U> unitary
-  and <math|D> diagonal. Defining the new coordinate
-  <math|w\<assign\><wide|U|\<bar\>> z>, we are to change the coordinates from
-  <math|z> to <math|w>.
-
-  First, we have to declare how <math|\<mathd\>z\<mathd\><wide|z|\<bar\>>>
-  changes with coordinates. Recall the case in real space, we have
+  Next, we wonder how the <math|\<mathd\>z\<mathd\><wide|z|\<bar\>>> changes
+  with unitary transformation. Let <math|U> an <math|n\<times\>n> unitary
+  matrix, and <math|w\<assign\><wide|U|\<bar\>> z> where
+  <math|<wide|U|\<bar\>>> denotes the <hlink|transjugate|https://en.wikipedia.org/wiki/Conjugate_transpose>
+  of <math|U> <\footnote>
+    Generally, we should use dagger-notation, instead of bar-notation, for
+    transjugate of vector or matrix. Here, it should be
+    <math|\<mathd\>z<rsup|\<dagger\>>> instead of
+    <math|\<mathd\><wide|z|\<bar\>>>, and <math|U<rsup|\<dagger\>>> instead
+    of <math|<wide|U|\<bar\>>>. And usually, the bar-notation is left to
+    <hlink|complex conjugate|https://en.wikipedia.org/wiki/Complex_conjugate>.
+    But for the fact that complex conjugate is absent in this note, and that
+    notations shall be consistent throughout the note, we employ bar-notation
+    for representing transjugate.
+  </footnote>. Recall the case in real space, we have
   <math|\<mathd\>x=det<around*|(|\<partial\>x/\<partial\>y|)> \<mathd\>y>.
   The derivation of this formula is purely algebraic, thus can be directly
   generalized to complex space. So, from <math|z=U w>, we get
@@ -251,34 +189,64 @@
     <wide|U|\<bar\>>=1|}>=>|<cell|\<mathd\>w\<mathd\><wide|w|\<bar\>>.>>>>
   </align>
 
-  Then, defining <math|h> by <math|b\<backassign\>U h>, we have
-  <math|<wide|z|\<bar\>> A z=<wide|w|\<bar\>> <wide|U|\<bar\>> A U
-  w=<wide|w|\<bar\>> D w>, <math|<wide|b|\<bar\>> z=<wide|h|\<bar\>>
-  <wide|U|\<bar\>> U w=<wide|h|\<bar\>> w>, <math|b <wide|z|\<bar\>>=h
-  <wide|w|\<bar\>>>. Altogether, we find
+  So, we find that the differential form is invariant for unitary
+  transformation.
+
+  <subsection|Multi-Dimensional Complex Gaussian Integral><label|section:
+  Multi-Dimensional Complex Gaussian Integral>
+
+  In this section, we are to generalize the complex Gaussian integral from
+  one-dimensional to multi-dimensional, that is
 
   <\equation*>
     <big|int><rsub|\<bbb-C\><rsup|2n>>\<mathd\>z\<mathd\><wide|z|\<bar\>>
-    exp<around*|(|-<wide|z|\<bar\>> A \ z+<wide|b|\<bar\>> z+b
-    <wide|z|\<bar\>>|)>=<big|int><rsub|\<bbb-C\><rsup|2n>>\<mathd\>w\<mathd\><wide|w|\<bar\>>
-    exp<around*|(|-<wide|w|\<bar\>> D \ w+<wide|h|\<bar\>> w+h
-    <wide|w|\<bar\>>|)>.
+    exp<around*|(|-<wide|z|\<bar\>> A \ z+<wide|b|\<bar\>> z+<wide|z|\<bar\>>
+    b|)>,
+  </equation*>
+
+  where <math|A> is a positive definite Hermitian matrix and <math|b> a
+  complex vector. It must be noted that <math|b> and <math|z> are now
+  vectors, <math|<wide|b|\<bar\>>> or <math|<wide|z|\<bar\>>> means more than
+  complex conjugate, but including transpose. For this reason, we write
+  <math|<wide|z|\<bar\>> b> instead of <math|b <wide|z|\<bar\>>>.
+
+  Following the same strategy used for real Gaussian integral, we first
+  diagonalize <math|A> as <math|A=U D <wide|U|\<bar\>>> with <math|U> unitary
+  and <math|D> diagonal. Defining the new coordinate
+  <math|\<zeta\>\<assign\><wide|U|\<bar\>> z>, we are to change the
+  coordinates from <math|z> to <math|\<zeta\>>. We have,
+  <math|<wide|z|\<bar\>> A z=<wide|\<zeta\>|\<bar\>> <wide|U|\<bar\>> A U
+  \<zeta\>=<wide|\<zeta\>|\<bar\>> D \<zeta\>>. As discussed in section
+  <reference|section: Differential Form Is Invariant for Unitary
+  Transformation>, we have <math|\<mathd\>z\<mathd\><wide|z|\<bar\>>=\<mathd\>\<zeta\>\<mathd\><wide|\<zeta\>|\<bar\>>>.
+
+  Then, defining <math|h\<assign\><wide|U|\<bar\>> b>, we have
+  <math|<wide|b|\<bar\>> z=<wide|h|\<bar\>> <wide|U|\<bar\>> U
+  \<zeta\>=<wide|h|\<bar\>> \<zeta\>> and <math|<wide|z|\<bar\>>
+  b=<wide|\<zeta\>|\<bar\>> h>. Altogether, we find
+
+  <\equation*>
+    <big|int><rsub|\<bbb-C\><rsup|2n>>\<mathd\>z\<mathd\><wide|z|\<bar\>>
+    exp<around*|(|-<wide|z|\<bar\>> A \ z+<wide|b|\<bar\>> z+<wide|z|\<bar\>>
+    b|)>=<big|int><rsub|\<bbb-C\><rsup|2n>>\<mathd\>\<zeta\>\<mathd\><wide|\<zeta\>|\<bar\>>
+    exp<around*|(|-<wide|\<zeta\>|\<bar\>> D \ \<zeta\>+<wide|h|\<bar\>>
+    \<zeta\>+<wide|\<zeta\>|\<bar\>> h|)>.
   </equation*>
 
   Now, we can separate each dimension and compute for each dimension
   individually, as
 
   <\align>
-    <tformat|<table|<row|<cell|>|<cell|<big|int><rsub|\<bbb-C\><rsup|2n>>\<mathd\>z\<mathd\><wide|z|\<bar\>>
-    exp<around*|(|-<wide|z|\<bar\>> A \ z+<wide|b|\<bar\>> z+b
-    <wide|z|\<bar\>>|)>>>|<row|<cell|=>|<cell|<big|int><rsub|\<bbb-C\><rsup|2n>>\<mathd\>w\<mathd\><wide|w|\<bar\>>
-    <big|prod><rsub|\<alpha\>=1><rsup|n>exp<around*|(|-<wide|w|\<bar\>><rsup|\<alpha\>>
-    D<rsub|\<alpha\>\<alpha\>>w<rsup|\<alpha\>>+<wide|h|\<bar\>><rsup|\<alpha\>>
-    w<rsup|\<alpha\>>+h<rsub|\<alpha\>> <wide|w|\<bar\>><rsup|\<alpha\>>|)>>>|<row|<cell|<around*|{|<text|move
-    <math|\<mathd\>w<rsup|\<alpha\>>> to <math|\<mathd\><wide|w|\<bar\>><rsup|\<alpha\>>>>|}>=>|<cell|<around*|(|-1|)><rsup|n
-    <around*|(|n-1|)>/2> <big|prod><rsub|\<alpha\>=1><rsup|n><around*|[|<big|int><rsub|\<bbb-C\><rsup|2>>\<mathd\>w<rsup|\<alpha\>>\<mathd\><wide|w|\<bar\>><rsup|\<alpha\>>exp<around*|(|-<wide|w|\<bar\>><rsup|\<alpha\>>
-    D<rsub|\<alpha\>\<alpha\>>w<rsup|\<alpha\>>+<wide|h|\<bar\>><rsup|\<alpha\>>
-    w<rsup|\<alpha\>>+h<rsub|\<alpha\>> <wide|w|\<bar\>><rsup|\<alpha\>>|)>|]>>>|<row|<cell|<around*|{|<text|1-dimensional
+    <tformat|<table|<row|<cell|>|<cell|<big|int><rsub|\<bbb-C\><rsup|2n>>\<mathd\>\<zeta\>\<mathd\><wide|\<zeta\>|\<bar\>>
+    <big|prod><rsub|\<alpha\>=1><rsup|n>exp<around*|(|-<wide|\<zeta\>|\<bar\>>
+    D \<zeta\>+<wide|h|\<bar\>> \<zeta\>+<wide|\<zeta\>|\<bar\>>
+    h|)>>>|<row|<cell|<around*|{|<text|move
+    <math|\<mathd\>\<zeta\><rsup|\<alpha\>>> to
+    <math|\<mathd\><wide|\<zeta\>|\<bar\>><rsup|\<alpha\>>>>|}>=>|<cell|<around*|(|-1|)><rsup|n
+    <around*|(|n-1|)>/2> <big|prod><rsub|\<alpha\>=1><rsup|n><around*|[|<big|int><rsub|\<bbb-C\><rsup|2>>\<mathd\>\<zeta\><rsup|\<alpha\>>\<mathd\><wide|\<zeta\>|\<bar\>><rsup|\<alpha\>>exp<around*|(|-<wide|\<zeta\>|\<bar\>><rsup|\<alpha\>>
+    D<rsub|\<alpha\>\<alpha\>>\<zeta\><rsup|\<alpha\>>+<wide|h|\<bar\>><rsup|\<alpha\>>
+    \<zeta\><rsup|\<alpha\>>+<wide|\<zeta\>|\<bar\>><rsup|\<alpha\>>
+    h<rsub|\<alpha\>>|)>|]>>>|<row|<cell|<around*|{|<text|1-dimensional
     result>|}>=>|<cell|<around*|(|-1|)><rsup|n <around*|(|n-1|)>/2>
     <big|prod><rsub|\<alpha\>=1><rsup|n><around*|[|<frac|-2\<mathpi\>
     \<mathi\>|D<rsub|\<alpha\>\<alpha\>>>
@@ -289,18 +257,20 @@
     <wide|h|\<bar\>><rsub|\<alpha\>>|D<rsub|\<alpha\>\<alpha\>>>|)>.>>>>
   </align>
 
-  The final step is changing coordinates back to <math|z> from <math|w>. We
-  have <math|D=<wide|U|\<bar\>> A U> and <math|h=<wide|U|\<bar\>> b>. We have
+  The final step is changing coordinates back to <math|z> from
+  <math|\<zeta\>>. Since <math|D=<wide|U|\<bar\>> A U> and
+  <math|h=<wide|U|\<bar\>> b>, we have
 
   <\align>
-    <tformat|<table|<row|<cell|>|<cell|<big|prod><rsub|\<alpha\>=1><rsup|n>D<rsub|\<alpha\>\<alpha\>>>>|<row|<cell|=>|<cell|det<around*|(|D|)>>>|<row|<cell|<around*|{|D=\<cdots\>|}>=>|<cell|det<around*|(|<wide|U|\<bar\>>
+    <tformat|<table|<row|<cell|>|<cell|<big|prod><rsub|\<alpha\>=1><rsup|n>D<rsub|\<alpha\>\<alpha\>>>>|<row|<cell|=>|<cell|det<around*|(|D|)>>>|<row|<cell|=>|<cell|det<around*|(|<wide|U|\<bar\>>
     A U|)>>>|<row|<cell|=>|<cell|det<around*|(|<wide|U|\<bar\>>|)>
     det<around*|(|A|)> det<around*|(|U|)>>>|<row|<cell|=>|<cell|det<around*|(|U
     <wide|U|\<bar\>>|)> det<around*|(|A|)>>>|<row|<cell|<around*|{|U
     <wide|U|\<bar\>>=1|}>=>|<cell|det<around*|(|A|)>.>>>>
   </align>
 
-  And since
+  And since <math|U> and <math|<wide|U|\<bar\>>> are mutually inverse, we
+  have
 
   <\align>
     <tformat|<table|<row|<cell|>|<cell|<around*|(|<wide|U|\<bar\>> A
@@ -310,7 +280,7 @@
     <wide|U|\<bar\>>=1|}>=>|<cell|<wide|U|\<bar\>> A<rsup|-1> U,>>>>
   </align>
 
-  \ we have
+  thus
 
   <\align>
     <tformat|<table|<row|<cell|>|<cell|<big|sum><rsub|\<alpha\>=1><rsup|n><frac|h<rsub|\<alpha\>>
@@ -325,34 +295,38 @@
 
   Altogether, we find
 
-  <\equation>
+  <\equation*>
     <big|int><rsub|\<bbb-C\><rsup|2n>>\<mathd\>z\<mathd\><wide|z|\<bar\>>
-    exp<around*|(|-<wide|z|\<bar\>> A \ z+<wide|b|\<bar\>> z+b
-    <wide|z|\<bar\>>|)>=<frac|\<mathi\><rsup|n
-    <around*|(|n+2|)>><around*|(|2\<mathpi\>|)><rsup|n>|det<around*|(|A|)>>
-    exp<around*|(|<wide|b|\<bar\>> A<rsup|-1> b|)>,
+    exp<around*|(|-<wide|z|\<bar\>> A \ z+<wide|b|\<bar\>> z+<wide|z|\<bar\>>
+    b|)>=<frac|\<mathi\><rsup|n <around*|(|n+2|)>><around*|(|2\<mathpi\>|)><rsup|n>|det<around*|(|A|)>>
+    exp<around*|(|<wide|b|\<bar\>> A<rsup|-1> b|)>.
+  </equation*>
+
+  By the formula <math|det<around*|(|A|)>=exp<around*|(|tr
+  ln<around*|(|A|)>|)>>, we can convert <math|det<around*|(|A|)>> into
+  exponential. Finally, we arrive at
+
+  <\equation>
+    ln<around*|[|<big|int><rsub|\<bbb-C\><rsup|2n>>\<mathd\>z\<mathd\><wide|z|\<bar\>>
+    exp<around*|(|-<wide|z|\<bar\>> A \ z+<wide|b|\<bar\>> z+<wide|z|\<bar\>>
+    b|)>|]>=<wide|b|\<bar\>> A<rsup|-1> b-tr ln<around*|(|A|)>+Const,
   </equation>
 
-  or, since <math|1/det<around*|(|A|)>=det<around*|(|A<rsup|-1>|)>>,
+  where the constant <math|Const=ln<around*|(|\<mathi\><rsup|n
+  <around*|(|n+2|)>><around*|(|2\<mathpi\>|)><rsup|n>|)>=n <around*|(|n+2|)>
+  <around*|(|\<mathpi\> \<mathi\>/2|)>+n ln<around*|(|2\<mathpi\>|)>>.
 
-  <\equation>
-    <big|int><rsub|\<bbb-C\><rsup|2n>>\<mathd\>z\<mathd\><wide|z|\<bar\>>
-    exp<around*|(|-<wide|z|\<bar\>> A \ z+<wide|b|\<bar\>> z+b
-    <wide|z|\<bar\>>|)>=\<mathi\><rsup|n <around*|(|n+2|)>><around*|(|2\<mathpi\>|)><rsup|n>
-    det<around*|(|A<rsup|-1>|)> exp<around*|(|<wide|b|\<bar\>> A<rsup|-1>
-    b|)>.
-  </equation>
+  <subsection|From Complex Gaussian Integral to Real Gaussian
+  Integral><label|section: From Complex Gaussian Integral to Real Gaussian
+  Integral>
 
-  <subsection|Reducing to Real Gaussian Integral (TODO)><label|section:
-  Reducing to Real Gaussian Integral>
-
-  To reduce to real Gaussian integral, say multi-dimensional version, we
-  simply let the <math|A> and <math|b> completely real. Then, by changing
-  coordinates from <math|\<mathd\>z\<mathd\><wide|z|\<bar\>>> to
-  <math|\<mathd\>x\<mathd\>y>, where <math|z=x+\<mathi\> y>, we will arrive
-  at two individual real Gaussian integrals. So, the result is a
-  multiplication of two real Gaussian integral. It is for this reason, it is
-  the sqrt of <math|det<around*|(|A|)>> in real Gaussian integral.
+  To reduce to multi-dimensional real Gaussian integral, we simply let the
+  <math|A> and <math|b> completely real. Then, by changing coordinates from
+  <math|\<mathd\>z\<mathd\><wide|z|\<bar\>>> to <math|\<mathd\>x\<mathd\>y>,
+  where <math|z=x+\<mathi\> y>, we will arrive at two individual real
+  Gaussian integrals. So, the result is a multiplication of two real Gaussian
+  integral. It is for this reason, it is the square root of
+  <math|det<around*|(|A|)>> in real Gaussian integral.
 
   Explicitly, we change coordinates from <math|\<mathd\>z\<mathd\><wide|z|\<bar\>>>
   to <math|\<mathd\>x\<mathd\>y>. As it has been derived,
@@ -367,13 +341,21 @@
     x|)>>>|<row|<cell|=>|<cell|\<mathi\><rsup|n <around*|(|n+2|)>> 2<rsup|n>
     <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x exp<around*|(|-x<rsup|t> A
     x+2 b<rsup|t> x|)><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
-    exp<around*|(|-y<rsup|t> A y|)>>>|<row|<cell|<around*|{|previous
-    result|}>=>|<cell|<frac|\<mathi\><rsup|n
-    <around*|(|n+2|)>><around*|(|2\<mathpi\>|)><rsup|n>|det<around*|(|A|)>>
-    exp<around*|(|<wide|b|\<bar\>> A<rsup|-1> b|)>.>>>>
+    exp<around*|(|-y<rsup|t> A y|)>.>>>>
   </align>
 
-  So, we have
+  By plugging in the result of complex Gaussian integral, we have
+
+  <\equation*>
+    \<mathi\><rsup|n <around*|(|n+2|)>> 2<rsup|n>
+    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x exp<around*|(|-x<rsup|t> A
+    x+2 b<rsup|t> x|)><big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>y
+    exp<around*|(|-y<rsup|t> A y|)>=<frac|\<mathi\><rsup|n
+    <around*|(|n+2|)>><around*|(|2\<mathpi\>|)><rsup|n>|det<around*|(|A|)>>
+    exp<around*|(|<wide|b|\<bar\>> A<rsup|-1> b|)>.
+  </equation*>
+
+  So, we get
 
   <\equation*>
     \ <frac|\<mathpi\><rsup|n>|det<around*|(|A|)>>exp<around*|(|<wide|b|\<bar\>>
@@ -391,45 +373,175 @@
     y|)>=<sqrt|<frac|\<mathpi\><rsup|n>|det<around*|(|A|)>>>.
   </equation*>
 
-  Plugging back, we find
+  Plugging back, we get
 
   <\equation*>
     <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x exp<around*|(|-x<rsup|t> A
     x+2 b<rsup|t> x|)>=<sqrt|<frac|\<mathpi\><rsup|n>|det<around*|(|A|)>>>
-    exp<around*|(|<wide|b|\<bar\>> A<rsup|-1> b|)>,
+    exp<around*|(|<wide|b|\<bar\>> A<rsup|-1> b|)>.
+  </equation*>
+
+  By re-defining <math|A\<rightarrow\>A/2> and <math|b\<rightarrow\>b/2>, we
+  finally arrive at
+
+  <\equation*>
+    <big|int><rsub|\<bbb-R\><rsup|n>>\<mathd\>x
+    exp<around*|(|-<frac|1|2>x<rsup|t> A x+b<rsup|t>
+    x|)>=<sqrt|<frac|<around*|(|2\<mathpi\>|)><rsup|n>|det<around*|(|A|)>>>
+    exp<around*|(|<frac|1|2> <wide|b|\<bar\>> A<rsup|-1> b|)>,
   </equation*>
 
   which is exactly the formula of real multi-dimensional Gaussian integral.
 
-  <subsection|Measurement is Representation Independent>
+  <subsection|Trace of Logarithm Is Invariant for Unitary
+  Transformation><label|section: Trace of Logarithm Is Invariant for Unitary
+  Transformation>
 
-  Go back to the first problem: what is the measurement
-  <math|\<mathd\>\|\<varphi\> \<rangle\>>? Now, we can answer this problem:
-  we should use <math|\<mathd\>\|\<varphi\>
-  \<rangle\>\<mathd\>\<langle\>\<varphi\> \|> instead of
-  <math|\<mathd\>\|\<varphi\> \<rangle\>>. Explicitly, given a complete
-  orthogonal basis <math|\|x \<rangle\>>, <math|\<mathd\>\|\<varphi\>
+  In this section, we are to exam how the <math|tr ln<around*|(|A|)>> changes
+  with unitary transformation. We start at the well-known formula
+
+  <\equation*>
+    \<mathe\><rsup|<wide|U|\<bar\>> X U>=<wide|U|\<bar\>> \<mathe\><rsup|X>
+    U,
+  </equation*>
+
+  where <math|U> is a unitary operator and <math|X> is an arbitrary operator.
+  It can be proven by simply expanding exponential as series while noticing
+  <math|U <wide|U|\<bar\>>=1>. Taking logarithm on both sides, we find
+
+  <\equation*>
+    <wide|U|\<bar\>> X U=ln<around*|(|<wide|U|\<bar\>> \<mathe\><rsup|X>
+    U|)>.
+  </equation*>
+
+  And letting <math|A\<assign\>\<mathe\><rsup|X>>, we arrive at
+
+  <\equation>
+    <wide|U|\<bar\>> ln<around*|(|A|)> U=ln <around*|(|<wide|U|\<bar\>> A
+    U|)>.
+  </equation>
+
+  Taking tace on both side, we get <math|tr<around*|(|<wide|U|\<bar\>>
+  ln<around*|(|A|)> U|)>=tr ln<around*|(|A|)>>.<\footnote>
+    This is apparent when we write it in component. That is,
+
+    <\align>
+      <tformat|<table|<row|<cell|>|<cell|tr<around*|(|<wide|U|\<bar\>>
+      ln<around*|(|A|)> U|)>>>|<row|<cell|<around*|{|<text|in
+      component>|}>=>|<cell|<big|sum><rsub|\<alpha\>,\<beta\>,\<gamma\>><wide|U|\<bar\>><rsub|\<alpha\>\<beta\>>
+      ln<around*|(|A<rsub|\<beta\>\<gamma\>>|)>
+      U<rsub|\<gamma\>\<alpha\>>>>|<row|<cell|=>|<cell|<big|sum><rsub|\<beta\>\<comma\>\<gamma\>><around*|(|<big|sum><rsub|\<alpha\>>U<rsub|\<gamma\>\<alpha\>>
+      <wide|U|\<bar\>><rsub|\<alpha\>\<beta\>>|)>
+      ln<around*|(|A<rsub|\<beta\>\<gamma\>>|)>>>|<row|<cell|<around*|{|U
+      <wide|U|\<bar\>>=1|}>=>|<cell|<big|sum><rsub|\<beta\>\<comma\>\<gamma\>>\<delta\><rsub|\<beta\>\<gamma\>>
+      \ ln<around*|(|A<rsub|\<beta\>\<gamma\>>|)>>>|<row|<cell|=>|<cell|<big|sum><rsub|\<beta\>>ln<around*|(|A<rsub|\<beta\>\<beta\>>|)>,>>>>
+    </align>
+
+    which is the <math|tr ln<around*|(|A|)>> written in component.
+  </footnote> Thus,
+
+  <\equation*>
+    tr ln<around*|(|A|)>=tr ln<around*|(|<wide|U|\<bar\>> A U|)>.
+  </equation*>
+
+  So, trace of logarithm is invariant for unitary transformation.
+
+  <subsection|Complex Gaussian Integral Is Invariant for Unitary
+  Transformation><label|section: Complex Gaussian Integral Is Invariant for
+  Unitary Transformation>
+
+  Now, we can exam how the result of complex Gaussian integral changes with
+  unitary transformation. We restate the result as
+
+  <\equation*>
+    ln<around*|[|<big|int><rsub|\<bbb-C\><rsup|2n>>\<mathd\>z\<mathd\><wide|z|\<bar\>>
+    exp<around*|(|-<wide|z|\<bar\>> A \ z+<wide|b|\<bar\>> z+<wide|z|\<bar\>>
+    b|)>|]>=<wide|b|\<bar\>> A<rsup|-1> b-tr ln<around*|(|A|)>+Const.
+  </equation*>
+
+  Taking unitary transformation <math|w\<assign\><wide|U|\<bar\>> z>, the
+  matrix or operator <math|A> transforms as <math|B\<assign\><wide|U|\<bar\>>
+  A U>, and the <math|b> as <math|c\<assign\><wide|U|\<bar\>> b>. Because of
+  <math|U <wide|U|\<bar\>>=1>, we have <math|A<rsup|-1>=U B
+  <wide|U|\<bar\>>>. As discussed in section <reference|section: Differential
+  Form Is Invariant for Unitary Transformation> and section
+  <reference|section: Trace of Logarithm Is Invariant for Unitary
+  Transformation>, the differential form and the trace of logarithm are
+  invariant for unitary transformation. So, the result of complex Gaussian
+  integral is transformed to
+
+  <\equation*>
+    ln<around*|[|<big|int><rsub|\<bbb-C\><rsup|2n>>\<mathd\>w\<mathd\><wide|w|\<bar\>>
+    exp<around*|(|-<wide|w|\<bar\>> B \ w+<wide|c|\<bar\>> w+<wide|w|\<bar\>>
+    c|)>|]>=<wide|c|\<bar\>> B<rsup|-1> c-tr ln<around*|(|B|)>+Const.
+  </equation*>
+
+  It is seen that the result of complex Gaussian integral is invariant for
+  unitary transformation.
+
+  <subsection|Gaussian Integral in Dirac's Representation
+  Theory><label|section: Gaussian Integral in Dirac's Representation Theory>
+
+  In Dirac's representation theory <\footnote>
+    For Dirac's representation theory, we reference to the book
+    <with|font-shape|italic|<hlink|The Principles of Quantum
+    Mechanics|https://www.amazon.com/Principles-Quantum-Mechanics-International-Monographs/dp/0198520115>>
+    by P. A. M. Dirac.
+  </footnote>, we can change from one representation to another by changing
+  the complete orthogonal basis. For instance, let <math|\|\<varphi\>
+  \<rangle\>> an abstract ket. In <math|\<alpha\>>-representation with
+  complete orthogonal basis <math|<around*|{|\|\<alpha\>
+  \<rangle\>\|\<alpha\>\<in\>A|}>>, it is <math|\<langle\>\<alpha\>
+  \|\<varphi\> \<rangle\>>. Changing to <math|\<beta\>>-representation with
+  complete orthogonal basis <math|<around*|{|\|\<beta\>
+  \<rangle\>\|\<beta\>\<in\>B|}>> makes
+
+  <\align>
+    <tformat|<table|<row|<cell|>|<cell|\<langle\>\<alpha\> \|\<varphi\>
+    \<rangle\>>>|<row|<cell|<around*|{|<big|sum><rsub|\<beta\>\<in\>B>\|\<beta\>
+    \<rangle\>\<langle\>\<beta\> \|=1|}>=>|<cell|<big|sum><rsub|\<beta\>\<in\>B>\<langle\>\<alpha\>
+    \|\<beta\> \<rangle\>\<langle\>\<beta\> \|\<varphi\> \<rangle\>.>>>>
+  </align>
+
+  This change is nothing but a unitary transformation, where the unitary
+  matrix or operator has component <math|\<langle\>\<alpha\> \|\<beta\>
+  \<rangle\>>. It indicates that the result of complex Gaussian integral can
+  be expressed in Dirac's bracket notation, and the invariance for unitary
+  transformation means that the expression is independent of specific
+  representations.
+
+  Explicitly, for any positive definite Hermitian operator <math|A> and any
+  ket <math|\|b \<rangle\>> which may not be normalized, we have
+
+  <\equation>
+    <big|int>\<mathd\>\|\<varphi\> \<rangle\>\<mathd\>\<langle\>\<varphi\> \|
+    exp<around*|(|-\<langle\>\<varphi\> \|A\|\<varphi\>
+    \<rangle\>+\<langle\>b \|\<varphi\> \<rangle\>+\<langle\>\<varphi\> \|b
+    \<rangle\>|)>=exp<around*|(|\<langle\>b \|A<rsup|-1>\|b \<rangle\>-tr
+    ln<around*|(|A|)>+Const|)>,
+  </equation>
+
+  where for any complete orthogonal basis <math|<around*|{|\|x
+  \<rangle\>\|x\<in\>X|}>>, <math|\<mathd\>\|\<varphi\>
   \<rangle\>\<mathd\>\<langle\>\<varphi\>
-  \|\<assign\><big|prod><rsub|x>\<mathd\><around*|[|\<langle\>x \|\<varphi\>
+  \|=<big|prod><rsub|x\<in\>X>\<mathd\><around*|[|\<langle\>x \|\<varphi\>
   \<rangle\>|]>\<mathd\><around*|[|\<langle\>\<varphi\> \|x \<rangle\>|]>>.
-  Remark that <math|\<mathd\>\|\<varphi\>
-  \<rangle\>\<mathd\>\<langle\>\<varphi\> \|> is invariant when changing from
-  <math|\|x \<rangle\>> to another complete orthogonal basis. Indeed, when
-  <math|\|x \<rangle\>\<rightarrow\>\|k \<rangle\>> where <math|\|k
-  \<rangle\>> is another complete orthogonal basis, we have
-  <math|<big|prod><rsub|x>\<mathd\><around*|[|\<langle\>x \|\<varphi\>
-  \<rangle\>|]>\<mathd\><around*|[|\<langle\>\<varphi\> \|x
-  \<rangle\>|]>=det<around*|(|U|)> det<around*|(|<wide|U|\<bar\>>|)>
-  <big|prod><rsub|k>\<mathd\><around*|[|\<langle\>k \|\<varphi\>
-  \<rangle\>|]>\<mathd\><around*|[|\<langle\>\<varphi\> \|k
-  \<rangle\>|]>=<big|prod><rsub|k>\<mathd\><around*|[|\<langle\>k
-  \|\<varphi\> \<rangle\>|]>\<mathd\><around*|[|\<langle\>\<varphi\> \|k
-  \<rangle\>|]>>, where <math|U<rsub|x,k>\<assign\>\<langle\>x \|k
-  \<rangle\>> is unitary.
 
-  <section|Trace>
+  This expression is abstract. We can get an explicit expression by simply
+  inserting a complete relation, like <math|<big|sum><rsub|\<alpha\>>\|
+  \<alpha\>\<rangle\>\<langle\>\<alpha\> \|=1> or
+  <math|<big|int><rsub|X>\<mathd\>x\|x \<rangle\>\<langle\>x \|=1>
+  <\footnote>
+    The expression of <math|tr ln<around*|(|A|)>> for continuous
+    representation is discussed in appendix <reference|appendix: Trace in
+    Continuous Representation>.
+  </footnote>. This this reason, it is called the
+  <with|font-series|bold|generalized Gaussian integral>.
 
-  <subsection|Trace in Continuous Representation>
+  <appendix|Continuous Representation>
+
+  <subsection|Trace in Continuous Representation><label|appendix: Trace in
+  Continuous Representation>
 
   We have known what trace means for finite-dimensional matrix, and even for
   representation with discrete spectrum. We are to determine how trace is
@@ -445,14 +557,19 @@
 
   <\align>
     <tformat|<table|<row|<cell|>|<cell|<big|sum><rsub|\<alpha\>>\<langle\>\<alpha\>
-    \|A\|\<alpha\> \<rangle\>>>|<row|<cell|=>|<cell|<big|sum><rsub|\<alpha\>><big|int>\<mathd\>x<big|int>\<mathd\>x<rprime|'>
+    \|A\|\<alpha\> \<rangle\>>>|<row|<cell|<around*|{|<text|insert
+    <math|<big|int>\<mathd\>x\| x\<rangle\>\<langle\>x
+    \|=1>>|}>=>|<cell|<big|sum><rsub|\<alpha\>><big|int>\<mathd\>x<big|int>\<mathd\>x<rprime|'>
     \<langle\> \<alpha\>\| x\<rangle\>\<langle\>x \|A\|x<rprime|'>
     \<rangle\>\<langle\>x<rprime|'> \|\<alpha\>
-    \<rangle\>>>|<row|<cell|<around*|{|<big|sum><rsub|\<alpha\>>\|\<alpha\>
-    \<rangle\>\<langle\>\<alpha\> \|=1|}>=>|<cell|<big|int>\<mathd\>x<big|int>\<mathd\>x<rprime|'>
+    \<rangle\>>>|<row|<cell|=>|<cell|<big|int>\<mathd\>x<big|int>\<mathd\>x<rprime|'>
     \<langle\>x \|A\|x<rprime|'> \<rangle\><around*|(|<big|sum><rsub|\<alpha\>>\<langle\>x<rprime|'>
     \|\<alpha\> \<rangle\>\<langle\> \<alpha\>\|
-    x\<rangle\>|)>>>|<row|<cell|=>|<cell|<big|int>\<mathd\>x<big|int>\<mathd\>x<rprime|'>
+    x\<rangle\>|)>>>|<row|<cell|<around*|{|<big|sum><rsub|\<alpha\>>\|\<alpha\>
+    \<rangle\>\<langle\>\<alpha\> \|=1|}>=>|<cell|<big|int>\<mathd\>x<big|int>\<mathd\>x<rprime|'>
+    \<langle\>x \|A\|x<rprime|'> \<rangle\> \<langle\> x\|x<rprime|'>
+    \<rangle\>>>|<row|<cell|<around*|{|\<langle\> x\|x<rprime|'>
+    \<rangle\>=\<delta\><around*|(|x-x<rprime|'>|)>|}>=>|<cell|<big|int>\<mathd\>x<big|int>\<mathd\>x<rprime|'>
     \<langle\>x \|A\|x<rprime|'> \<rangle\>
     \<delta\><around*|(|x-x<rprime|'>|)>>>|<row|<cell|=>|<cell|<big|int>\<mathd\>x
     \<langle\>x \|A\|x \<rangle\>.>>>>
@@ -461,114 +578,6 @@
   So, in continuous representation like <math|\|x \<rangle\>>, the
   <math|tr<around*|(|A|)>> is defined as <math|<big|int>\<mathd\>x
   \<langle\>x \|A\|x \<rangle\>>.
-
-  <subsection|Trace of Logarithm is Representation Independent>
-
-  Now, we have solved the first problem and come to the second. That is, how
-  <math|tr ln <around*|(|A|)>> changes with representation.
-
-  But, first of all, we have to check what happens when changing
-  representation. We start at a known formula
-
-  <\equation*>
-    \<mathe\><rsup|U X <wide|U|\<bar\>>>=U \<mathe\><rsup|X>
-    <wide|U|\<bar\>>,
-  </equation*>
-
-  where <math|U> is a unitary operator and <math|X> is an arbitrary operator.
-  It can be proven by simply noticing <math|U <wide|U|\<bar\>>=1>. Taking
-  logarithm on both sides, we find
-
-  <\equation*>
-    U X <wide|U|\<bar\>>=ln<around*|(|U \<mathe\><rsup|X>
-    <wide|U|\<bar\>>|)>.
-  </equation*>
-
-  And letting <math|A\<assign\>\<mathe\><rsup|X>>, we arrive at
-
-  <\equation>
-    U ln<around*|(|A|)> <wide|U|\<bar\>>=ln <around*|(|U A
-    <wide|U|\<bar\>>|)>.
-  </equation>
-
-  When changing representation from <math|\|\<alpha\> \<rangle\>> to
-  <math|\|\<beta\> \<rangle\>>, unitary operator <math|U> represents
-  <math|\<langle\>\<alpha\> \|\<beta\> \<rangle\>>. And this formula states
-  that
-
-  <\equation*>
-    <big|sum><rsub|\<beta\>><big|sum><rsub|\<beta\><rprime|'>>\<langle\>
-    \<alpha\>\|\<beta\> \<rangle\> ln<around*|(|\<langle\>\<beta\>
-    \|A\|\<beta\><rprime|'> \<rangle\>|)> \<langle\>\<beta\><rprime|'>
-    \|\<alpha\><rprime|'> \<rangle\>=ln<around*|(|<big|sum><rsub|\<beta\>><big|sum><rsub|\<beta\><rprime|'>>\<langle\>
-    \<alpha\>\|\<beta\> \<rangle\> \<langle\>\<beta\> \|A\|\<beta\><rprime|'>
-    \<rangle\> \<langle\>\<beta\><rprime|'> \|\<alpha\><rprime|'>
-    \<rangle\>|)>.
-  </equation*>
-
-  Notice that <math|<big|sum><rsub|\<beta\>><big|sum><rsub|\<beta\><rprime|'>>\<langle\>
-  \<alpha\>\|\<beta\> \<rangle\> \<langle\>\<beta\> \|A\|\<beta\><rprime|'>
-  \<rangle\> \<langle\>\<beta\><rprime|'> \|\<alpha\><rprime|'>
-  \<rangle\>=\<langle\>\<alpha\> \|A\|\<alpha\><rprime|'>\<rangle\>>, we then
-  have
-
-  <\equation*>
-    <big|sum><rsub|\<beta\>><big|sum><rsub|\<beta\><rprime|'>>\<langle\>
-    \<alpha\>\|\<beta\> \<rangle\> ln<around*|(|\<langle\>\<beta\>
-    \|A\|\<beta\><rprime|'> \<rangle\>|)> \<langle\>\<beta\><rprime|'>
-    \|\<alpha\><rprime|'> \<rangle\>=ln<around*|(|\<langle\>\<alpha\>
-    \|A\|\<alpha\><rprime|'>\<rangle\>|)>.
-  </equation*>
-
-  Now, we take trace on both sides. The right hand side comes to be the
-  <math|tr ln<around*|(|A|)>> under the <math|\|\<alpha\> \<rangle\>>
-  representation. While the left hand side comes to be
-
-  <\align>
-    <tformat|<table|<row|<cell|>|<cell|<big|sum><rsub|\<alpha\>><big|sum><rsub|\<beta\>><big|sum><rsub|\<beta\><rprime|'>>\<langle\>
-    \<alpha\>\|\<beta\> \<rangle\> ln<around*|(|\<langle\>\<beta\>
-    \|A\|\<beta\><rprime|'> \<rangle\>|)> \<langle\>\<beta\><rprime|'>
-    \|\<alpha\>\<rangle\>>>|<row|<cell|=>|<cell|<big|sum><rsub|\<beta\>><big|sum><rsub|\<beta\><rprime|'>>
-    ln<around*|(|\<langle\>\<beta\> \|A\|\<beta\><rprime|'> \<rangle\>|)>
-    <around*|(|<big|sum><rsub|\<alpha\>>\<langle\>\<beta\><rprime|'>
-    \|\<alpha\><rprime|'> \<rangle\>\<langle\> \<alpha\>\|\<beta\>
-    \<rangle\>|)>>>|<row|<cell|<around*|{|<big|sum><rsub|\<alpha\>>\|\<alpha\>
-    \<rangle\>\<langle\>\<alpha\> \|=1|}>=>|<cell|<big|sum><rsub|\<beta\>><big|sum><rsub|\<beta\><rprime|'>>
-    ln<around*|(|\<langle\>\<beta\> \|A\|\<beta\><rprime|'> \<rangle\>|)>
-    \<langle\>\<beta\><rprime|'> \|\<beta\>
-    \<rangle\>>>|<row|<cell|=>|<cell|<big|sum><rsub|\<beta\>>ln<around*|(|\<langle\>\<beta\>
-    \|A\|\<beta\> \<rangle\>|)>,>>>>
-  </align>
-
-  which is the <math|tr ln<around*|(|A|)>> under the <math|\|\<beta\>
-  \<rangle\>> representation. So, <math|tr ln<around*|(|A|)>> in different
-  representations are equal.
-
-  Now, we can answer the second problem: <math|tr ln<around*|(|A|)>> is
-  independent of representation.
-
-  <section|Gaussian Integral in Dirac's Representation Theory>
-
-  Putting all discussions in this chapter together, we arrive at a Gaussian
-  integral in Dirac's representation theory. That is, for any positive
-  definite Hermitian operator <math|A> and any ket <math|\|b \<rangle\>>, we
-  have
-
-  <\equation>
-    <big|int>\<mathd\>\|\<varphi\> \<rangle\>\<mathd\>\<langle\>\<varphi\> \|
-    exp<around*|(|-\<langle\>\<varphi\> \|A\|\<varphi\>
-    \<rangle\>+\<langle\>b \|\<varphi\> \<rangle\>+\<langle\>\<varphi\> \|b
-    \<rangle\>|)>=exp<around*|(|\<langle\>b \|A<rsup|-1>\|b \<rangle\>-tr
-    ln<around*|(|A|)>+Const|)>,
-  </equation>
-
-  where for any representation <math|\|x \<rangle\>>,
-  <math|\<mathd\>\|\<varphi\> \<rangle\>\<mathd\>\<langle\>\<varphi\>
-  \|=<big|prod><rsub|x>\<mathd\><around*|[|\<langle\>x \|\<varphi\>
-  \<rangle\>|]>\<mathd\><around*|[|\<langle\>\<varphi\> \|x \<rangle\>|]>>.
-  Remark that both <math|\<mathd\>\|\<varphi\> \<rangle\>\<langle\>\<varphi\>
-  \|> and <math|tr ln<around*|(|A|)>> are independent of representation,
-  which means keeping invariant when representation is changed.
 
   <appendix|Berezin Integral (TODO)>
 
@@ -580,8 +589,8 @@
     \<mathi\><rsup|n <around*|(|n+2|)>><around*|(|2\<mathpi\>|)><rsup|n>
     exp<around*|(|<wide|b|\<bar\>> A<rsup|-1> b|)>=<big|int>\<mathd\>z
     \<mathd\><wide|z|\<bar\>> \<mathd\>\<theta\>\<mathd\>\<eta\>
-    exp<around*|(|-<wide|z|\<bar\>> A \ z+<wide|b|\<bar\>> z+b
-    <wide|z|\<bar\>>-\<theta\><rsup|t> A \<eta\>|)>
+    exp<around*|(|-<wide|z|\<bar\>> A \ z+<wide|b|\<bar\>> z+<wide|z|\<bar\>>
+    b-\<theta\><rsup|t> A \<eta\>|)>
   </equation>
 </body>
 
@@ -593,22 +602,50 @@
 
 <\references>
   <\collection>
+    <associate|appendix: Trace in Continuous Representation|<tuple|A.1|?>>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|3.1|5>>
-    <associate|auto-11|<tuple|3.2|5>>
-    <associate|auto-12|<tuple|4|6>>
+    <associate|auto-10|<tuple|A|5>>
+    <associate|auto-11|<tuple|A.1|5>>
+    <associate|auto-12|<tuple|B|6>>
     <associate|auto-13|<tuple|A|6>>
-    <associate|auto-2|<tuple|1|1>>
-    <associate|auto-3|<tuple|1.1|1>>
-    <associate|auto-4|<tuple|2|2>>
-    <associate|auto-5|<tuple|2.1|2>>
-    <associate|auto-6|<tuple|2.2|3>>
-    <associate|auto-7|<tuple|2.3|4>>
-    <associate|auto-8|<tuple|2.4|5>>
-    <associate|auto-9|<tuple|3|5>>
+    <associate|auto-14|<tuple|A.1|?>>
+    <associate|auto-15|<tuple|B|?>>
+    <associate|auto-2|<tuple|1.1|1>>
+    <associate|auto-3|<tuple|1.2|1>>
+    <associate|auto-4|<tuple|1.3|2>>
+    <associate|auto-5|<tuple|1.4|2>>
+    <associate|auto-6|<tuple|1.5|3>>
+    <associate|auto-7|<tuple|1.6|4>>
+    <associate|auto-8|<tuple|1.7|5>>
+    <associate|auto-9|<tuple|1.8|5>>
     <associate|footnote-1|<tuple|1|3>>
+    <associate|footnote-2|<tuple|2|?>>
+    <associate|footnote-3|<tuple|3|?>>
+    <associate|footnote-4|<tuple|4|?>>
+    <associate|footnote-5|<tuple|5|?>>
+    <associate|footnote-6|<tuple|6|?>>
     <associate|footnr-1|<tuple|1|3>>
-    <associate|section: Reducing to Real Gaussian Integral|<tuple|2.3|4>>
+    <associate|footnr-2|<tuple|2|?>>
+    <associate|footnr-3|<tuple|3|?>>
+    <associate|footnr-4|<tuple|4|?>>
+    <associate|footnr-5|<tuple|5|?>>
+    <associate|footnr-6|<tuple|6|?>>
+    <associate|section:|<tuple|2.7|?>>
+    <associate|section: Complex Gaussian Integral Is Invariant for Unitary
+    Transformation|<tuple|1.7|?>>
+    <associate|section: Differential Form Is Invariant for Unitary
+    Transformation|<tuple|1.3|?>>
+    <associate|section: From Complex Gaussian Integral to Real Gaussian
+    Integral|<tuple|1.5|?>>
+    <associate|section: Gaussian Integral in Dirac's Representation
+    Theory|<tuple|1.8|?>>
+    <associate|section: Multi-Dimensional Complex Gaussian
+    Integral|<tuple|1.4|?>>
+    <associate|section: One-Dimensional Complex Gaussian
+    Integral|<tuple|1.2|?>>
+    <associate|section: Reducing to Real Gaussian Integral|<tuple|2.5|4>>
+    <associate|section: Trace of Logarithm Is Invariant for Unitary
+    Transformation|<tuple|1.6|?>>
   </collection>
 </references>
 
@@ -656,7 +693,7 @@
       Representation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-10>>
 
-      <with|par-left|<quote|1tab>|3.2<space|2spc>Trace of Logorithm is
+      <with|par-left|<quote|1tab>|3.2<space|2spc>Trace of Logarithm is
       Representation Independent <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-11>>
 
